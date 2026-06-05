@@ -1,5 +1,5 @@
 class Ghx < Formula
-  desc "GitHub CLI Cache Proxy — caching daemon for gh to prevent API rate limiting (valkyriweb fork)"
+  desc "Caching proxy daemon for the GitHub CLI (valkyriweb fork)"
   homepage "https://github.com/valkyriweb/ghx"
   version "1.6.0"
   license "MIT"
@@ -27,12 +27,21 @@ class Ghx < Formula
   def install
     bin.install "ghx"
     bin.install "ghxd"
-    real_gh = ENV.fetch("PATH", "").split(File::PATH_SEPARATOR).any? do |dir|
+    bin.install "gh" unless real_gh_on_path?
+  end
+
+  # True when a real gh (not our shim) is already on PATH, so we skip the shim.
+  def real_gh_on_path?
+    ENV.fetch("PATH", "").split(File::PATH_SEPARATOR).any? do |dir|
       p = File.join(dir, "gh")
-      next unless File.executable?(p)
-      !(File.binread(p, 512).include?("ghx-shim") rescue false)
+      next false unless File.executable?(p)
+
+      begin
+        !File.binread(p, 512).include?("ghx-shim")
+      rescue StandardError
+        false
+      end
     end
-    bin.install "gh" unless real_gh
   end
 
   def caveats
@@ -40,8 +49,8 @@ class Ghx < Formula
       ghx caches GitHub CLI calls to prevent API rate limiting.
       Use 'ghx' instead of 'gh' to benefit from caching.
 
-      If no 'gh' binary was found during installation, a lightweight
-      shim was installed that routes 'gh' calls through ghx.
+      If no real 'gh' was found at install time, a lightweight shim was
+      installed that routes 'gh' calls through ghx.
     EOS
   end
 

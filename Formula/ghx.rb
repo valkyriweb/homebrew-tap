@@ -38,7 +38,7 @@ class Ghx < Formula
 
       begin
         !File.binread(p, 512).include?("ghx-shim")
-      rescue StandardError
+      rescue
         false
       end
     end

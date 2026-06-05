@@ -37,7 +37,7 @@ class Ghx < Formula
       next false unless File.executable?(p)
 
       begin
-        !File.binread(p, 512).include?("ghx-shim")
+        File.binread(p, 512).exclude?("ghx-shim")
       rescue
         false
       end

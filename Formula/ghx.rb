@@ -7,20 +7,20 @@ class Ghx < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/valkyriweb/ghx/releases/download/v1.7.1/ghx-darwin-arm64.tar.gz"
-      sha256 "511b4db2efa54d60c8b36e45735d673ba42c7328cb3935ca7f4c2c32638910fb"
+      sha256 "fce4c5cfdc8fa8a4ba38bb4a8ae6b4b1dc025ff0cfa6eeb6724b14e05841e81b"
     else
       url "https://github.com/valkyriweb/ghx/releases/download/v1.7.1/ghx-darwin-amd64.tar.gz"
-      sha256 "0bd01c65c1459cd09960b488e6963ab38e5fa0fb040f177609a8f0f644baf0d8"
+      sha256 "1e5268b13a5849453e0b3804e0d921c842e61d2d1905c57661847db5fcd5a341"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/valkyriweb/ghx/releases/download/v1.7.1/ghx-linux-arm64.tar.gz"
-      sha256 "3e0993cb048473b0def3285c95d4a136b748bf1586385c441aee789c21664da0"
+      sha256 "65bcb413a7d4d07967f557b6963b8b547f8d611ae15dbb5ed218d31a694be72f"
     else
       url "https://github.com/valkyriweb/ghx/releases/download/v1.7.1/ghx-linux-amd64.tar.gz"
-      sha256 "c4d7740c23ab0b989dafdb796ecc3c646ec47bae7d8bdb29d5e71aa44b147684"
+      sha256 "b3605f3e401a39f02cb570b346f51a713f3734899e07e2fd182e13353e3845b6"
     end
   end
 

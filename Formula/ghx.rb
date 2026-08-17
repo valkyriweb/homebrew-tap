@@ -1,26 +1,26 @@
 class Ghx < Formula
   desc "Caching proxy daemon for the GitHub CLI (valkyriweb fork)"
   homepage "https://github.com/valkyriweb/ghx"
-  version "1.7.0"
+  version "1.7.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/valkyriweb/ghx/releases/download/v1.7.0/ghx-darwin-arm64.tar.gz"
-      sha256 "f60669255f8c1824cf3f3f6b0e20ea5b79c7846b88ad94353dfc6e3cdea98433"
+      url "https://github.com/valkyriweb/ghx/releases/download/v1.7.1/ghx-darwin-arm64.tar.gz"
+      sha256 "fce4c5cfdc8fa8a4ba38bb4a8ae6b4b1dc025ff0cfa6eeb6724b14e05841e81b"
     else
-      url "https://github.com/valkyriweb/ghx/releases/download/v1.7.0/ghx-darwin-amd64.tar.gz"
-      sha256 "d5ad17940a0f4edf830e5b189742694c095f346f1643abb97781a43805157080"
+      url "https://github.com/valkyriweb/ghx/releases/download/v1.7.1/ghx-darwin-amd64.tar.gz"
+      sha256 "1e5268b13a5849453e0b3804e0d921c842e61d2d1905c57661847db5fcd5a341"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/valkyriweb/ghx/releases/download/v1.7.0/ghx-linux-arm64.tar.gz"
-      sha256 "c51cdf460efc7c40cb23622aeeb3062f2c62d7dd9caa5cc618f7adbbce59bd1d"
+      url "https://github.com/valkyriweb/ghx/releases/download/v1.7.1/ghx-linux-arm64.tar.gz"
+      sha256 "65bcb413a7d4d07967f557b6963b8b547f8d611ae15dbb5ed218d31a694be72f"
     else
-      url "https://github.com/valkyriweb/ghx/releases/download/v1.7.0/ghx-linux-amd64.tar.gz"
-      sha256 "52a6d19bdaa48e4abff13c709b7d92b74de2166f7736fb31e844f630260da0ff"
+      url "https://github.com/valkyriweb/ghx/releases/download/v1.7.1/ghx-linux-amd64.tar.gz"
+      sha256 "b3605f3e401a39f02cb570b346f51a713f3734899e07e2fd182e13353e3845b6"
     end
   end
 
@@ -48,9 +48,6 @@ class Ghx < Formula
     <<~EOS
       ghx caches GitHub CLI calls to prevent API rate limiting.
       Use 'ghx' instead of 'gh' to benefit from caching.
-
-      If no 'gh' binary was found during installation, a lightweight
-      shim was installed that routes 'gh' calls through ghx.
     EOS
   end
 

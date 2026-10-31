@@ -1,0 +1,20 @@
+{
+  "crabbox-valky": {
+    "repository": "valkyriweb/crabbox",
+    "version": "0.79.1-valky.4",
+    "assets": {
+      "crabbox_0.79.1-valky.4_darwin_arm64.tar.gz": "a4493b80c9afb561b35219a2231e2f5de684e933c137245059b916eb531747ca",
+      "crabbox_0.79.1-valky.4_linux_amd64.tar.gz": "5986f27c33a6561e6b8a42d45e83f55c6d3c5dbbdc0ec7188ff3655d6b931c61"
+    }
+  },
+  "ghx": {
+    "repository": "valkyriweb/ghx",
+    "version": "1.7.1",
+    "assets": {
+      "ghx-darwin-amd64.tar.gz": "1e5268b13a5849453e0b3804e0d921c842e61d2d1905c57661847db5fcd5a341",
+      "ghx-darwin-arm64.tar.gz": "fce4c5cfdc8fa8a4ba38bb4a8ae6b4b1dc025ff0cfa6eeb6724b14e05841e81b",
+      "ghx-linux-amd64.tar.gz": "b3605f3e401a39f02cb570b346f51a713f3734899e07e2fd182e13353e3845b6",
+      "ghx-linux-arm64.tar.gz": "65bcb413a7d4d07967f557b6963b8b547f8d611ae15dbb5ed218d31a694be72f"
+    }
+  }
+}

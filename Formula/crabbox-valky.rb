@@ -1,20 +1,20 @@
 class CrabboxValky < Formula
   desc "Remote software testing and execution (valkyriweb fork build)"
   homepage "https://github.com/valkyriweb/crabbox"
-  version "0.79.1-valky.2"
+  version "0.79.1-valky.4"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/valkyriweb/crabbox/releases/download/v0.79.1-valky.2/crabbox_0.79.1-valky.2_darwin_arm64.tar.gz"
-      sha256 "717ac6ac099fa2beec8ac3d8137836878df658e08e45c3ae25f0a1a85c72081e"
+      url "https://github.com/valkyriweb/crabbox/releases/download/v0.79.1-valky.4/crabbox_0.79.1-valky.4_darwin_arm64.tar.gz"
+      sha256 "a4493b80c9afb561b35219a2231e2f5de684e933c137245059b916eb531747ca"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/valkyriweb/crabbox/releases/download/v0.79.1-valky.2/crabbox_0.79.1-valky.2_linux_amd64.tar.gz"
-      sha256 "b3145e0f6f5660a046445f6dbfb5207137b79d394008a46d75687aa2839b0dfa"
+      url "https://github.com/valkyriweb/crabbox/releases/download/v0.79.1-valky.4/crabbox_0.79.1-valky.4_linux_amd64.tar.gz"
+      sha256 "5986f27c33a6561e6b8a42d45e83f55c6d3c5dbbdc0ec7188ff3655d6b931c61"
     end
   end
 

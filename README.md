@@ -12,6 +12,8 @@ Set `RUBY=/path/to/ruby` to use a Ruby executable outside PATH. No Homebrew,
 Python packages, network access, or installed formulae are needed. The audit
 checks Ruby syntax and every formula's version, release URLs, and SHA-256 values
 against the checked-in release snapshot, including all platform assets.
+The Formula audit workflow runs this check on pull requests and pushes to main,
+so a formula/snapshot mismatch fails CI.
 It does not replace `brew audit` or run the formula's installed-binary tests.
 
 `tests/releases.json` records the upstream release assets verified on
